@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --letters_white: #F2F2F2;
+    --main_black: #141615;
+    --futur_blue: #1A27C9;
+    --transition_global: all 250ms ease-in-out;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+html, body {
+    font-size: 22.3px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--letters_white);
+    background-color: var(--main_black);
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem 5rem;
+
+    .logo img {
+        width: 3rem;
+    }
+
+    .nav-container {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links {
+        text-decoration: none;
+        font-size: 0.7rem;
+        margin: 1rem;
+
+        &:link, &:visited {
+            color: var(--letters_white);
+            border-bottom: 3px solid transparent;
+            transition: var(--transition_global)
+        }
+
+        &:active, &:hover, &:focus {
+            border-bottom: solid 1px var(--letters_white);
+           
+        }
+        
+    }
+}
+
+.section {
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+
+}
+
+.section-content {
+    width: 60vw;
+}
+
+.hero-cover {
+    background: url("https://assets.entrepreneur.com/content/3x2/2000/1679490732-ChrisDoImageforBlog.jpg");
+    background-size: cover;
+}
+
+h1{ 
+    font-size: 4rem;
+    line-height: 4.5rem;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.space-h1 {
+    margin-top: -10px;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+h6 {
+    font-weight: 100;
+    font-size: 0.6rem;
+}
+
+@keyframes one {
+    0% {left: 50vw; top: 50vh;}
+    25% {left: 60vw; top: 10vh;}
+    50% {left: 70vw; top: 10vh;}
+    75% {left: 80px; top: 5vh;}
+    100% {left: 50vw; top: 50vh;}
+}
+
+@keyframes two {
+    0% {left: 1vw; top: 1vh;}
+    25% {left: 10vw; top: 1vh;}
+    50% {left: 40vw; top: 10vh;}
+    75% {left: 30px; top: 5vh;}
+    100% {left: 1vw; top:1vh;}
+}
+
+@keyframes three {
+    0% {left: 20vw; top: 20vh;}
+    25% {left: 5vw; top: 5vh;}
+    50% {left: 10vw; top: 15vh;}
+    75% {left: 15px; top: 20vh;}
+    100% {left: 20vw; top: 20vh;}
+}
+
+.bg-shape1 {
+    width: 500px;
+    height: 500px;
+    border-radius: 9999px;
+    position: absolute;
+    animation: one 20s infinite;
+    z-index: -1;
+    display: grid;
+    place-items: right;
+}
+
+.bg-shape2 {
+    width: 600px;
+    height: 600px;
+    border-radius: 9999px;
+    position: absolute;
+    animation: two 15s infinite;
+    z-index: -1;
+}
+
+.bg-shape3 {
+    width: 600px;
+    height: 600px;
+    border-radius: 9999px;
+    position: absolute;
+    animation: three 15s infinite;
+    z-index: -1;
+}
+
+.opacity-50 {
+    opacity: 0.6;
+}
+
+.bg-blur {
+    filter: blur(100px);
+}
+
+.bg-blue {
+    background-color: var(--futur_blue)
+}
+
+.link-chris {
+
+    text-decoration: none;
+
+    &:link, &:visited {
+        color: var(--letters_white);
+        transition: var(--transition_global);
+    }
+
+    &:active, &:hover, &:focus {
+        text-decoration: underline;
+        border-bottom: solid 5px var(--letters_white);
+    }
+}
+
+/* FULLPAGEJS CONFIG */
+.fp-watermark { 
+    /* delete fullpage watermark */
+    display: none;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    /* make nav dots white */
+    background: var(--letters_white);
+}
